@@ -22,14 +22,14 @@ function LandingPage() {
       };
       fetchUserName();
     }
-    setLoading(false);
   }, []);
   function logOutHandler() {
     console.log("i ran");
     localStorage.removeItem("token");
     window.location.reload();
   }
-  if (isLoading) {
+  const token = localStorage.getItem("token");
+  if (token && isLoading) {
     return null;
   }
   return (
