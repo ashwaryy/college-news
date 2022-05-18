@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./LandingPage.css";
 function LandingPage() {
+  const [isLoading, setLoading] = useState(true);
   const [username, getUsername] = useState("");
   useEffect(() => {
     const apiURL = process.env.REACT_APP_API_ADDRESS;
@@ -16,7 +17,7 @@ function LandingPage() {
           },
         });
         const promise = await response.json();
-        console.log(promise);
+        setLoading(false);
         getUsername(promise.split(" ")[0]);
       };
       fetchUserName();
@@ -26,6 +27,9 @@ function LandingPage() {
     console.log("i ran");
     localStorage.removeItem("token");
     window.location.reload();
+  }
+  if (isLoading) {
+    return null;
   }
   return (
     <div className="lp-main-container">
