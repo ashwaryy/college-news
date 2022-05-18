@@ -22,6 +22,7 @@ function LandingPage() {
       };
       fetchUserName();
     }
+    setLoading(false);
   }, []);
   function logOutHandler() {
     console.log("i ran");
