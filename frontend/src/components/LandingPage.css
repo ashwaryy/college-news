@@ -1,0 +1,66 @@
+.lp-main-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  height: 90vh;
+}
+
+.lp-main-container h1 {
+  margin-top: 0px;
+  margin-left: 85px;
+  margin-bottom: 0px;
+  font-size: 80px;
+}
+
+.lp-main-container h4 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-size: 25px;
+}
+
+.lp-buttons {
+  display: flex;
+  margin-top: 35px;
+  justify-content: space-between;
+  width: 200px;
+}
+
+.lp-buttons button {
+  background-color: #e9dcc9;
+  border: 1px solid #e8d3b4;
+  border-radius: 25px;
+  height: 40px;
+  width: 95px;
+}
+
+.lp-buttons button:hover {
+  background-color: #e8cca2;
+  transition: 1s;
+}
+#lp-logout-button {
+  background-color: white;
+  margin-top: 4px;
+  margin-left: 10px;
+  border: 1px solid white;
+  color: blue;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 600px) {
+  .lp-main-container h1 {
+    font-size: 55px;
+  }
+  .lp-main-container h4 {
+    font-size: 15px;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .lp-main-container h1 {
+    font-size: 45px;
+  }
+  .lp-main-container h4 {
+    font-size: 15px;
+  }
+}

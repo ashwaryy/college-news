@@ -1,0 +1,106 @@
+.logp-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f9f8f6;
+}
+.regp-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f9f8f6;
+}
+#logp-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2%;
+  width: 400px;
+  height: 240px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+  box-shadow: 0.2px 0.2px 2px 2px #cdcbcb37;
+}
+#regp-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2%;
+  width: 400px;
+  height: 300px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+  box-shadow: 0.2px 0.2px 2px 2px #cdcbcb37;
+}
+
+.logp-button {
+  background-color: #e9dcc9;
+  border: 1px solid #e8d3b4;
+  border-radius: 25px;
+  height: 17%;
+  width: 60%;
+  margin-top: 3%;
+  margin-bottom: 2%;
+}
+
+.logp-button button:hover {
+  background-color: #e8cca2;
+  transition: 1s;
+}
+
+.logp-a {
+  text-decoration: none;
+  color: black;
+}
+
+.logp-input {
+  height: 40px;
+  width: 100%;
+  border: 1px solid rgb(228, 228, 227);
+  margin-bottom: 3%;
+}
+
+.logp-links {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 2%;
+}
+.logp-input:last-child {
+  all: unset;
+}
+
+.logp-links a {
+  text-decoration: none;
+  font-weight: bolder;
+  font-size: small;
+  margin-right: 4%;
+  margin-left: 4%;
+}
+.logp-label {
+  align-self: flex-start;
+  font-weight: bold;
+  font-size: small;
+  color: rgb(88, 87, 87);
+}
+.lp-wrong-password {
+  align-self: flex-start;
+  margin-top: 0px;
+  font-size: smaller;
+  color: red;
+  display: none;
+}
+
+.lp-wrong-email {
+  align-self: flex-start;
+  margin-top: 0px;
+  font-size: smaller;
+  color: red;
+  display: none;
+}

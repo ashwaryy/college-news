@@ -1,0 +1,72 @@
+.regp-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f9f8f6;
+}
+
+#regp-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2%;
+  width: 400px;
+  height: 300px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+  box-shadow: 0.2px 0.2px 2px 2px #cdcbcb37;
+}
+
+.regp-button {
+  background-color: #e9dcc9;
+  border: 1px solid #e8d3b4;
+  border-radius: 25px;
+  height: 17%;
+  width: 45%;
+  margin-top: 3%;
+  margin-bottom: 2%;
+}
+
+.regp-button button:hover {
+  background-color: #e8cca2;
+  transition: 1s;
+}
+
+.regp-a {
+  text-decoration: none;
+  color: black;
+}
+
+.regp-input {
+  height: 40px;
+  width: 100%;
+  border: 1px solid rgb(228, 228, 227);
+  margin-bottom: 3%;
+}
+
+.regp-links {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 2%;
+}
+.regp-input:last-child {
+  all: unset;
+}
+
+.regp-links a {
+  text-decoration: none;
+  font-weight: bolder;
+  font-size: small;
+  margin-right: 4%;
+  margin-left: 4%;
+}
+.regp-label {
+  align-self: flex-start;
+  font-weight: bold;
+  font-size: small;
+  color: rgb(88, 87, 87);
+}

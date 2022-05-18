@@ -1,0 +1,19 @@
+.fp-body {
+  align-self: center;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2%;
+  padding: 2%;
+  box-shadow: 1px 1px #929090b4;
+  background-color: #eaddc966;
+  flex-basis: 315px;
+  flex-grow: 0;
+  flex-shrink: 0;
+  margin-right: 2%;
+}
+
+.fp-body h5 {
+  margin-top: 0px;
+}

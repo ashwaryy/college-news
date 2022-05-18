@@ -1,0 +1,26 @@
+#header-user-options {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-end;
+}
+#header-user-options h5 {
+  margin-bottom: 5px;
+  align-self: flex-end;
+}
+
+#header-user-options button {
+  background-color: white;
+  align-self: flex-end;
+  margin-top: 0px;
+  border: 1px solid white;
+  color: blue;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#header-back-arrow {
+  margin-top: 12px;
+  margin-bottom: 0px;
+  font-weight: bold;
+  cursor: pointer;
+}

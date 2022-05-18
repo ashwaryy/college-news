@@ -1,0 +1,71 @@
+#createp-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+#createp-user-options {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-end;
+  margin-right: 10%;
+}
+#createp-user-options h5 {
+  margin-bottom: 5px;
+}
+
+#createp-user-options button {
+  background-color: white;
+  align-self: flex-end;
+  margin-top: 0px;
+  border: 1px solid white;
+  color: blue;
+  cursor: pointer;
+  font-weight: bold;
+}
+#createp-form {
+  display: flex;
+  flex-direction: column;
+  padding-left: 10%;
+  padding-right: 10%;
+  height: 100vh;
+  align-items: center;
+  width: 100%;
+}
+
+#createp-post-body {
+  height: 40vh;
+  width: 80%;
+  margin-bottom: 10px;
+}
+#createp-post-title {
+  height: 4vh;
+  width: 80%;
+}
+
+.createp-button {
+  background-color: #e9dcc9;
+  border: 1px solid #e8d3b4;
+  border-radius: 25px;
+  height: 5%;
+  width: 20%;
+  margin-top: 1%;
+  margin-bottom: 2%;
+}
+
+.createp-button:hover {
+  background-color: #e8cca2;
+  transition: 1s;
+}
+
+.createp-label {
+  align-self: flex-start;
+  padding-left: 10%;
+  margin-bottom: 1%;
+  margin-top: 1%;
+  font-weight: bold;
+  font-size: small;
+}
+#createp-form h1 {
+  margin-bottom: 0px;
+}
