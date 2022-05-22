@@ -18,7 +18,7 @@ function LandingPage() {
         });
         const promise = await response.json();
         setLoading(false);
-        getUsername(promise.split(" ")[0]);
+        getUsername(promise.userName.split(" ")[0]);
       };
       fetchUserName();
     }

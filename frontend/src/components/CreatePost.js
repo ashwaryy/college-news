@@ -61,15 +61,9 @@ function CreatePost() {
         </label>
         <input type="text" id="createp-post-title" name="title" required />
         <label for="email" className="createp-label">
-          Author:
+          Author: {username}
         </label>
-        <input
-          type="text"
-          id="createp-post-title"
-          name="title"
-          required
-          value={username}
-        />
+
         <label for="body" className="createp-label">
           Body:
         </label>

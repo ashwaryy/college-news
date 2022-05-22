@@ -11,7 +11,7 @@ const editPost = async (req, res) => {
     );
     const updatedPost = await Post.find({ _id: id, user: email });
     if (updatedPost.length > 0) {
-      res.json({ status: "success" });
+      res.json({ status: "success", updatedPost: updatedPost });
     } else {
       res.status(403).send("you are not permitted to edit this post");
     }

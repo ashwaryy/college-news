@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./LoginPage.css";
 function LoginPage() {
+  const token = localStorage.getItem("token");
   const navigate = useNavigate();
   const apiURL = process.env.REACT_APP_API_ADDRESS;
   const [authToken, setAuthToken] = useState("");
@@ -33,56 +34,70 @@ function LoginPage() {
       errorTextem.style.display = "block";
     }
   };
+  if (!token) {
+    return (
+      <div className="logp-container">
+        <h1>Login</h1>
 
-  return (
-    <div className="logp-container">
-      <h1>Login</h1>
+        <div id="logp-form">
+          <label for="email" className="logp-label">
+            Email:
+          </label>
+          <input
+            type="text"
+            id="email"
+            name="email"
+            required
+            className="logp-input"
+            onClick={() => {
+              const errorTextem =
+                document.getElementsByClassName("lp-wrong-email")[0];
+              errorTextem.style.display = "none";
+            }}
+          />
+          <p className="lp-wrong-email">User Not Found</p>
 
-      <div id="logp-form">
-        <label for="email" className="logp-label">
-          Email:
-        </label>
-        <input
-          type="text"
-          id="email"
-          name="email"
-          required
-          className="logp-input"
-          onClick={() => {
-            const errorTextem =
-              document.getElementsByClassName("lp-wrong-email")[0];
-            errorTextem.style.display = "none";
-          }}
-        />
-        <p className="lp-wrong-email">User Not Found</p>
+          <label for="password" className="logp-label">
+            Password:
+          </label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            required
+            className="logp-input"
+            onClick={() => {
+              const errorText =
+                document.getElementsByClassName("lp-wrong-password")[0];
+              errorText.style.display = "none";
+            }}
+          />
+          <p className="lp-wrong-password">Wrong Password</p>
 
-        <label for="password" className="logp-label">
-          Password:
-        </label>
-        <input
-          type="password"
-          id="password"
-          name="password"
-          required
-          className="logp-input"
-          onClick={() => {
-            const errorText =
-              document.getElementsByClassName("lp-wrong-password")[0];
-            errorText.style.display = "none";
-          }}
-        />
-        <p className="lp-wrong-password">Wrong Password</p>
+          <button className="logp-button" onClick={SubmitHandler}>
+            <input type="submit" value="Submit" className="logp-input" />
+          </button>
 
-        <button className="logp-button" onClick={SubmitHandler}>
-          <input type="submit" value="Submit" className="logp-input" />
-        </button>
-
-        <div className="logp-links">
-          <a href="/register">Register</a>
-          <a href="/forgot">Forgot Password?</a>
-          <a href="/">Go Back</a>
+          <div className="logp-links">
+            <a href="/register">Register</a>
+            <a href="/forgot">Forgot Password?</a>
+            <a href="/">Go Back</a>
+          </div>
         </div>
       </div>
+    );
+  }
+  return (
+    <div className="logp-container">
+      <p>Already Logged In</p>
+      <button
+        className="logp-button"
+        style={{ width: "150px", height: "50px", marginTop: "0px" }}
+      >
+        <a href="/" style={{ textDecoration: "none", marginBottom: "0px" }}>
+          Go Back
+        </a>
+      </button>
     </div>
   );
 }

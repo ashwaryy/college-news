@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import Header from "./Header";
 import "./PostView.css";
 
-function PostView() {
+function PostView({ username, userEmail }) {
   const navigate = useNavigate();
   const [posts, getPosts] = useState([]);
 
@@ -23,9 +23,10 @@ function PostView() {
     };
     fetchPosts();
   }, []);
+
   return (
     <div className="pv-allposts-container">
-      <Header />
+      <Header username={username} userEmail={userEmail} />
       <h1 id="pv-title">News</h1>
       <h2>KLE Law College</h2>
 
@@ -38,9 +39,12 @@ function PostView() {
       <div className="pv-articles">
         {posts.map((post) => (
           <div key={post._id} className="pv-container">
-            <h3 className="pv-post-title">{post.title}</h3>
-            <p>By {post.author}</p>
-            <p className="pv-body">{post.body.substring(0, 400)}...</p>
+            <div className="pv-post-title">
+              <h3>{post.title}</h3>
+            </div>
+
+            <p className="pv-author">By {post.author}</p>
+            <p className="pv-body">{post.body.substring(0, 200)}...</p>
             <button
               onClick={() => {
                 navigate("/fullpost", { state: post });
@@ -48,6 +52,22 @@ function PostView() {
             >
               READ MORE
             </button>
+            {post.user === userEmail ? (
+              <div className="pv-edit-delete">
+                <button
+                  onClick={() => {
+                    navigate("/editpost", { state: post });
+                  }}
+                >
+                  Edit
+                </button>
+                <button onClick={handleDelete} id={post._id}>
+                  Delete
+                </button>
+              </div>
+            ) : (
+              <p></p>
+            )}
           </div>
         ))}
       </div>
@@ -56,3 +76,22 @@ function PostView() {
 }
 
 export default PostView;
+
+function handleDelete(event) {
+  const apiURL = process.env.REACT_APP_API_ADDRESS;
+  const token = localStorage.getItem("token");
+  const postID = event.target.id;
+
+  const fetchPosts = async () => {
+    const url = `${apiURL}/posts/${postID}`;
+    const response = await fetch(url, {
+      method: "DELETE",
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    });
+    console.log(response);
+    window.location.reload();
+  };
+  fetchPosts();
+}

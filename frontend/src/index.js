@@ -9,6 +9,8 @@ import RegisterPage from "./components/RegisterPage";
 import AllPosts from "./components/AllPosts";
 import AddPost from "./components/AddPost";
 import FullPost from "./components/FullPost";
+import EditPost from "./components/EditPost";
+
 import Error from "./components/Error";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -22,6 +24,7 @@ root.render(
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/posts" element={<AllPosts />} />
         <Route path="/fullpost" element={<FullPost />} />
+        <Route path="/editpost" element={<EditPost />} />
         <Route path="*" element={<Error />} />
       </Routes>
     </BrowserRouter>
