@@ -11,7 +11,7 @@
 
 .pv-articles {
   display: grid;
-  grid-template-columns: auto auto auto auto;
+  grid-template-columns: auto auto auto;
   margin-top: 2%;
 }
 .pv-container {
@@ -22,7 +22,6 @@
   box-shadow: 1px 1px #929090b4;
   background-color: #eaddc966;
   flex-basis: 215px;
-  height: 350px;
   flex-grow: 0;
   flex-shrink: 0;
   margin-right: 3%;
@@ -68,13 +67,6 @@
 }
 
 @media only screen and (max-width: 1108px) {
-  .pv-articles {
-    display: grid;
-    grid-template-columns: auto auto auto;
-  }
-}
-
-@media only screen and (max-width: 858px) {
   .pv-articles {
     display: grid;
     grid-template-columns: auto auto;
