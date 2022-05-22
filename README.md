@@ -8,8 +8,7 @@ College News
 6. User cannot view/add news items without logging in. 
 
 Things I am still working on
-1. Editing and deleting news items. Backend routes are done. Only frontend needs to be implemented.
-2. Making the website fully responsive.
-3. Ensuring user does not register with fake email. I am planning to implement sending verification code to user's email.
-4. Filter news items based on three categories: sports, cultural, academics.
-5. Some bugs, minor details like redirecting to correct path, etc.
+1. Ensuring user does not register with fake email. I am planning to implement sending verification code to user's email.
+2. Filter news items based on three categories: sports, cultural, academics.
+3. Some bugs, minor details like redirecting to correct path, etc.
+4. Showing confirmation messages on user registration, editing news items, etc.
