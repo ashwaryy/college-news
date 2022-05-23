@@ -28,7 +28,6 @@ function PostView({ username, userEmail }) {
   if (loading) {
     return (
       <>
-        <Header />
         <NewsLoading />
       </>
     );
