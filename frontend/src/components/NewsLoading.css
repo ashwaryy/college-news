@@ -1,0 +1,18 @@
+.loading-shimmer-effect-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  margin-top: 23%;
+  margin-left: 10%;
+  margin-right: 10%;
+  height: 43vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.loading-shimmer-item {
+  height: 42vh;
+  width: 40vh;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  padding: 2%;
+}

@@ -1,12 +1,13 @@
 import { React, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Header from "./Header";
+import NewsLoading from "./NewsLoading";
 import "./PostView.css";
 
 function PostView({ username, userEmail }) {
   const navigate = useNavigate();
   const [posts, getPosts] = useState([]);
-
+  const [loading, setLoading] = useState(true);
   useEffect(() => {
     const apiURL = process.env.REACT_APP_API_ADDRESS;
     const token = localStorage.getItem("token");
@@ -19,14 +20,17 @@ function PostView({ username, userEmail }) {
         },
       });
       const promise = await response.json();
+      setLoading(false);
       getPosts(promise.data);
     };
     fetchPosts();
   }, []);
-
+  if (loading) {
+    return <NewsLoading />;
+  }
   return (
     <div className="pv-allposts-container">
-      <Header username={username} userEmail={userEmail} />
+      <Header />
       <h1 id="pv-title">News</h1>
       <h2>KLE Law College</h2>
 

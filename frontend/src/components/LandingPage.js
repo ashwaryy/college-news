@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./LandingPage.css";
+
 function LandingPage() {
   const [isLoading, setLoading] = useState(true);
   const [username, getUsername] = useState("");

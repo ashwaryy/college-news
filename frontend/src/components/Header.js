@@ -1,7 +1,26 @@
-import { React } from "react";
+import { React, useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Header.css";
-function Header({ username }) {
+function Header() {
+  const [username, getUsername] = useState("");
+  useEffect(() => {
+    const apiURL = process.env.REACT_APP_API_ADDRESS;
+    const token = localStorage.getItem("token");
+    if (token) {
+      const fetchUserName = async () => {
+        const url = `${apiURL}/user`;
+        const response = await fetch(url, {
+          method: "GET",
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        });
+        const promise = await response.json();
+        getUsername(promise.userName.split(" ")[0]);
+      };
+      fetchUserName();
+    }
+  }, []);
   const navigate = useNavigate();
   function logOutHandler() {
     console.log("i ran");
