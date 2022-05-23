@@ -31,7 +31,22 @@ function LandingPage() {
   }
   const token = localStorage.getItem("token");
   if (token && isLoading) {
-    return null;
+    return (
+      <div className="lds-grid-container">
+        <div class="lds-grid">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <p>Loading...</p>
+      </div>
+    );
   }
   return (
     <div className="lp-main-container">

@@ -26,7 +26,12 @@ function PostView({ username, userEmail }) {
     fetchPosts();
   }, []);
   if (loading) {
-    return <NewsLoading />;
+    return (
+      <>
+        <Header />
+        <NewsLoading />
+      </>
+    );
   }
   return (
     <div className="pv-allposts-container">
