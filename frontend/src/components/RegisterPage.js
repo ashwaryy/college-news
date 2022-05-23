@@ -23,7 +23,7 @@ function LoginPage() {
     console.log(status);
     if (status.status) {
       window.alert("Registration Successful, Please login to view/add news");
-      navigate("/");
+      navigate("/login");
     } else {
       window.alert("User already exists");
     }
