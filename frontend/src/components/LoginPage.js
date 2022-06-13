@@ -84,6 +84,12 @@ function LoginPage() {
             <a href="/">Go Back</a>
           </div>
         </div>
+        <div className="demo-login-message">
+          <p>Dear recruiters, use these credentials to login</p>
+          <p>Username: ashwary@gmail.com</p>
+          <p>Password: 12345</p>
+          <p>Alternatively, you can register a new user.</p>
+        </div>
       </div>
     );
   }

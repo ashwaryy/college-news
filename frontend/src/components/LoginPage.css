@@ -104,3 +104,13 @@
   color: red;
   display: none;
 }
+.demo-login-message p {
+  margin-top: 1px;
+  margin-bottom: 1px;
+  font-size: 10px;
+  text-align: center;
+}
+
+.demo-login-message {
+  margin-top: 10px;
+}
